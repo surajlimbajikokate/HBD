@@ -1,0 +1,109 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ec2805, #21af44, #2b18d3);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px #ff6f61;
+}
+h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px #0f0beb;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow: 1px 1px #ff6f61;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.balloons {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4aaad6, #2104a3);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+}
+
+#balloon1 {
+    animation-delay: 0s;
+}
+#balloon2 {
+    animation-delay: 1s;
+}
+#balloon3 {
+    animation-delay: 2s;
+}
+#balloon4 {
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+}
+
+.cake {
+    margin-top: 50px;
+    transition: all 0.4s ease;
+}
+
+#cakeImg {
+    width: 300px;
+    display: none;
+}
